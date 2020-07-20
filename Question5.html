@@ -1,0 +1,44 @@
+<!-- You are managing a sales department for your company, you want to reward your employees based on
+the sales made by them during the year.
+The criteria is as follows:
+1. Sales from 0-5000 : 2%
+2. Sales from 5001 - 10000 : 5%
+3. Sales from 10001 - 20000 : 7%
+4. Above 20000 - 10%
+Then log the total commission earned by him -->
+
+
+<html>
+    <head>
+        <script>
+            function sale(){
+                let sales = document.getElementById('txtsales').value;
+                let comm;
+                switch(true){
+                    case sales>=0 && sales<=5000 :
+                    comm = (sales*2)/100;
+                    break;
+                    case sales>=5001 && sales<=1000 :
+                    comm = (sales*5)/100;
+                    break;
+                    case sales>=10001 && sales<=20000:
+                    comm=(sales*7)/100
+                    break;
+                    case sales>20000:
+                    comm=(sales*10)/100
+                    break;
+                }
+                document.getElementById('txtcom').value=comm;
+            }
+        </script>
+        <body>
+            <form>
+                Enter the sales
+                <input type='number' id='txtsales'><br><br>
+                The Comission
+                <input type='number' id='txtcom'><br><br>
+                <input type='button' value="get" onclick='sale()' >
+            </form>
+        </body>
+    </head>
+</html>

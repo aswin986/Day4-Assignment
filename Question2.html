@@ -1,0 +1,20 @@
+<!-- Question 2:
+Destructure the following object -->
+
+
+<html>
+    <head>
+        <script>
+            const student = {
+                name:"Helsiki ",
+                age:24,
+                projects:{
+                    dicegame: "Two player dice gaming using javascript"
+
+                }
+            }
+            const{name,age,projects:{dicegame}}=student
+            console.log(name,age,dicegame);
+        </script>
+    </head>
+</html>

@@ -1,0 +1,58 @@
+<!--Question 7:
+An integer number greater than 1 is called a prime if it cannot be divided without a remainder by anything
+except 1 and itself.
+In other words, n > 1 is a prime if it can’t be evenly divided by anything except 1 and n.
+For example, 5 is a prime, because it cannot be divided without a remainder by 2, 3 and 4.
+Write the code which outputs prime numbers in the interval from 2 to n.
+For n = 10 the result will be 2,3,5,7.
+P.S. The code should work for any n, not be hard-tuned for any fixed value  -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Qestion 1, Day 4, Date: 17 July 2020</title>
+</head>
+<script>
+    function prime() {
+    let start = Number(document.getElementById("start_range").value);
+    let end = Number(document.getElementById("end_range").value);
+  
+    for (j = start; j <= end; j++) {
+      if (j == 1) {
+        continue;
+      }
+      flag = 1;
+      for (i = 2; i <= j / 2; ++i) {
+        if (j % i == 0) {
+          flag = 0;
+          break;
+        }
+      }
+      if (flag == 1) {
+        console.log(j);
+      }
+    }
+  };
+</script>
+
+<body style="background-color: gainsboro;">
+
+    <h2>Answer:7 Day4</h2>
+    
+    <div class="container"
+        style='max-width: 90%; margin: auto; background-color: rgb(119, 190, 207); font-family: Lucida Sans;'>
+        
+        <h2>Prime Number between Interval</h2>
+        Lower Interval: <input id="start_range" type='number'><br /><br />
+        Upper Interval: <input id="end_range" type='number'><br /><br />
+        <input type="button" value="Print Prime Numbers" onclick="prime()"/>
+        <p id="primes"></p>
+    </div>
+
+    
+
+</body>
+
+</html>

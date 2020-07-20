@@ -1,0 +1,44 @@
+<!-- Question 4:
+Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division,
+Square root, Percentage.
+ -->
+
+
+ <html>
+     <head>
+         <script>
+             alert("Plese read carefully to find sqrt keep the first number and second number as default")
+             let a = Number(prompt("Enter the first number",0));
+             let b = Number(prompt("Enter the second Number",0));
+             let d = Number(prompt("Enter number to find sqrt"))
+             console.log(a)
+             console.log(b)
+             let res;
+             let choice = prompt("Enter add,sub,mult,div,per,sqrt");
+             switch(choice){
+                 case 'add' :
+                 res=a+b;
+                 console.log(res);
+                 break;
+                 case 'sub':
+                 res=a-b;
+                 console.log(res);
+                 break;
+                 case 'mult' :
+                 res=a*b;
+                 console.log(res);
+                 case 'div' :
+                 res=a/b;
+                 case 'per' :
+                 res=a%b;
+                 console.log(res)
+                 case 'sqrt' :
+                 console.log(Math.sqrt(d));
+
+
+             }
+             
+
+         </script>
+     </head>
+ </html>
